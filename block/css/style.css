@@ -1,0 +1,237 @@
+		body,div {
+			padding: 0;
+			margin: 0;
+		}
+		a:visited, a:link, a:active, a:hover {
+    		text-decoration: none !important;
+   		    color: white;
+		}
+		body {
+			font-size: 62.5%;
+			font-family: "Microsoft Yahei";
+			background: #eee;
+			transition: all 1s;
+		}
+		.player {
+			position: relative;
+			width: 650px;
+			height: 360px;
+			margin: 200px auto 0;
+			border: 3px solid white;
+			border-radius: 10px;
+		}
+		video {
+			width: 650px;
+			height: 360px;
+			border-radius: 10px;
+		}
+		.contorl-menu {
+			position: absolute;
+			bottom: 1px;
+			left: 5px;
+			width: 640px;
+			height: 50px;
+			border: none;
+			background: black;
+			z-index: 888;
+			opacity: 0.8;
+			border-radius: 3px;
+
+		}
+		#start {
+			position: relative;
+			left: 10px;
+			top: 5px;
+			margin: 0;
+		    width: 40px;
+			height: 40px;
+			color: white;
+			text-align: center;
+			line-height: 40px;
+			font-size: 20px;
+		}
+		#time {
+			position: absolute;
+			right: 105px;
+			bottom: 0;
+			height: 40px;
+			width: 100px;
+			line-height: 40px;
+	        text-align: center;
+	        color: white;
+		}
+		#bar {
+			position: absolute;
+			left: 70px;
+			top: 15px;
+			transform: translateY(-50%);
+			width: 450px;
+			height: 3px;
+			background: gray;
+			border-radius: 5px;
+			margin: 0;
+			padding-top: 1px;
+			padding-bottom: 1px;
+		}
+		#voice {
+			position: absolute;
+			left: 60px;
+			top: 15px;
+			margin: 0;
+		    width: 40px;
+			height: 40px;
+			color: white;
+			text-align: center;
+			line-height: 40px;
+			font-size: 15px;			
+		}
+		#dot {
+			width: 5px;
+			height: 3px;
+			background: #b7daff;
+			margin: 0;
+			border-radius: 5px;
+		}
+		#ball {
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 10px;
+			height: 10px;
+			background: #b7daff;
+			border-radius: 50%;
+			margin: 0;
+			display: none;
+		}
+		#timeline {
+			position: absolute;
+			top: -40px;
+			width: 60px;
+			height: 30px;
+			background: black;
+			transform: translateX(-50%);
+			margin: 0;
+			color: white;
+			border-radius: 10px;
+			text-align: center;
+			line-height: 30px;
+			transition: 0.5s left;
+			display: none;
+		}
+		#voiceline {
+			position: absolute;
+			top: 20px;
+			left: 30px;
+			width: 60px;
+			height: 3px;
+			border-radius: 5px;
+			background: gray;
+			margin: 0;
+		}
+		#voiceball {
+			height: 8px;
+			width: 8px;
+			left: 20px;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			background: #b7daff;
+			border-radius: 50%;
+			margin: 0;
+		}
+		#voicedot2 {
+			margin: 0;
+			width: 20px;
+			height: 3px;
+			background: #b7daff;
+		}
+		#Full {
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			color: white;
+			font-size: 20px;
+			margin: 0;
+		}
+		 video::-webkit-media-controls,
+         video::-moz-media-controls,
+         video::-webkit-media-controls-enclosure{
+         display:none !important;
+        }
+
+         video::-webkit-media-controls-panel,
+         video::-webkit-media-controls-panel-container,
+         video::-webkit-media-controls-start-playback-button {
+             display:none !important;
+             -webkit-appearance: none;
+         }
+      #mask {
+      	position: absolute;
+      	top: 50%;
+      	left: 50%;
+      	transform: translate(-50%,-50%);
+      	width: 100px;
+      	height: 100px;
+      	margin: 0;
+      	text-align: center;
+      	line-height: 100px;
+      	color: white;
+      	font-size: 50px;
+      	opacity: 0;
+      }
+     @keyframes sz{
+	    0%{
+			opacity: 0;
+	    }
+	    25%{
+			opacity: 0.25;
+        }
+        50% {
+        	opacity: .5;
+        }
+        75% {
+        	opacity: 0.25;
+        }
+        100%{
+        	opacity: 0;
+        }
+    }
+    #remind {
+    	position: absolute;
+    	width: 40px;
+    	height: 40px;
+    	margin: 0;
+    	right: 60px;
+		line-height: 40px;
+		font-size: 22px;
+		color: white;
+		top: 5px;
+		text-align: center;
+    }
+    .Ti {
+    	position: absolute;
+    	top: 0px;
+    	left: -50px;
+    	width: 100px;
+    	height: 30px;
+    	background: black;
+    	transition: all 1s;
+    	font-size: 12px;
+    	line-height: 30px;
+    	border-radius: 10px;
+    	opacity: 0;
+    }
+    #remind:hover .Ti{
+    	opacity: 1;
+    	top: -36px;
+    	transition: all 1s;
+    }
+    #Full:hover .Ti{
+    	opacity: 1;
+    	top: -36px;
+    	transition: all 1s;
+    }
+
