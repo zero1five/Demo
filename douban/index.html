@@ -23,8 +23,9 @@
     <p id="msg"></p>
     <hr />
     <div id="list"></div>
-
+    
     <script>
+        //信息懒加载
         function fn1(data){
             oMsg.innerHTML = data.title.$t + ':' + data['opensearch:totalResults'].$t + '条';
             var oEntry = data.entry;
@@ -39,11 +40,10 @@
         var oBtn = document.getElementById('btn');
         var oMsg = document.getElementById('msg');
         var oList = document.getElementById('list');
-        var oScript = document.createElement('script');
         oBtn.onclick = function(){
-            if(oQ.value != ''){
-
-                oScript.src = 'http://api.douban.com/book/subjects?q='+ oQ.value +'&alt=xd&callback=fn1&start-index=10';
+            if ( oQ.value != '' ) {
+                var oScript = document.createElement('script');
+                oScript.src = 'http://api.douban.com/book/subjects?q='+oQ.value+'&alt=xd&callback=fn1&start-index=1';
                 document.body.appendChild(oScript);
             }
         }
