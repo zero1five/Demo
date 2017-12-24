@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <title>Find and explore</title>
+    <style>
+        dl {
+            border-bottom: 1px dotted #000;
+        }
+        dt {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="q"><input type="button" id="btn" value="搜索">
+    <p id="msg"></p>
+    <hr />
+    <div id="list"></div>
+
+    <script>
+        function fn1(data){
+            oMsg.innerHTML = data.title.$t + ':' + data['opensearch:totalResults'].$t + '条';
+            var oEntry = data.entry;
+            var html = '';
+            for(var i=0; i<oEntry.length; i++){
+                html += '<dl><dt>' + oEntry[i].title.$t  + '</dt><dd><img src="'+ oEntry[i].link[2]['@href'] +'"></dd></dl>';
+            }
+            oList.innerHTML = html;
+        }
+
+        var oQ = document.getElementById('q');
+        var oBtn = document.getElementById('btn');
+        var oMsg = document.getElementById('msg');
+        var oList = document.getElementById('list');
+        var oScript = document.createElement('script');
+        oBtn.onclick = function(){
+            if(oQ.value != ''){
+
+                oScript.src = 'http://api.douban.com/book/subjects?q='+ oQ.value +'&alt=xd&callback=fn1&start-index=10';
+                document.body.appendChild(oScript);
+            }
+        }
+
+    </script>
+</body>
+</html>
