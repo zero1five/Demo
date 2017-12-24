@@ -25,7 +25,7 @@
     <div id="list"></div>
     
     <script>
-        //信息懒加载
+
         function fn1(data){
             oMsg.innerHTML = data.title.$t + ':' + data['opensearch:totalResults'].$t + '条';
             var oEntry = data.entry;
@@ -48,6 +48,20 @@
             }
         }
 
+        
+        function golist(){
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('get','http://api.douban.com/book/subjects?q='+oQ.value+'&alt=xd&callback=fn1&start-index=2',true);
+
+            xhr.send();
+            xhr.onreadystatechange = function(){
+                    
+                    if(xhr.readyState == 4){  
+                       alert (xhr.responseText);
+                    }
+            }     
+        }
     </script>
 </body>
 </html>
