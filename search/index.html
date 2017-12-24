@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #3d3939;
+        }
+        #q {
+            width: 300px;
+            height: 50px;
+            margin: 400px auto 0;
+            border: 5px solid royalblue;
+            display: block;
+            font-size: 20px;
+            position: relative;
+        }
+        i {
+            position: absolute;
+            top: 430px;
+            left: 60%;
+            transform: translateY(-50%);
+            color: aqua;
+            cursor: pointer;
+        }
+        ul {
+            position: absolute;
+            width: 305px;
+            border: 1px solid #e7b1b1;
+            left: 42%;
+            margin: 0;
+            list-style: none;
+            display: none;
+            padding: 0;
+        }
+        li {
+            line-height: 30px;
+            font-size: 18px;
+            color: white;
+        }
+        li:hover{
+            background: #e78122;
+            color: rgb(0, 0, 0);
+        }
+        a:link,a:visited,a:hover,a:active {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="q">
+    <ul id="ul">
+    </ul>
+    <i class="fa fa-search fa-3x" aria-hidden="true" id="i"></i>
+    <script>
+        function Zz(data){
+
+            var oUl = document.getElementById('ul');
+            var html = '';
+            if(data.s.length){
+                oUl.style.display = 'block';
+               for(var i=0; i <data.s.length; i++){
+                html += '<a target="_blank" href="http://www.baidu.com/s?wd= '+ data.s[i] +' "><li>'+ data.s[i] +'</li></a>';
+               }
+               oUl.innerHTML = html;
+            }else {
+                oUl.style.display = 'none';
+            }
+        }
+        var i = document.getElementById('i');
+        i.onclick = function(){
+            window.open('http://www.baidu.com/s?wd= '+ q.value +' ')
+        }
+
+        var oQ = document.getElementById('q');
+        var oUl = document.getElementById('ul');
+
+        oQ.onkeyup = function(){
+            if(this.value != ''){
+                var oScript = document.createElement('script');
+                oScript.src = 'http://suggestion.baidu.com/su?wd='+ this.value +'&cb=Zz';
+                document.body.appendChild(oScript);
+            }else {
+                oUl.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
