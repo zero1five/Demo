@@ -7,3 +7,5 @@
 <a href="http://voidsky.cn/Demo/douban/" target="_blank">豆瓣书架实例</a>
 <br />
 <a href="http://voidsky.cn/Demo/Gs/" target="_blank" target="_blank">淘宝商品图片放大镜实例</a>
+<br />
+<a href="http://voidsky.cn/Demo/clock/clock.html" target="_blank" target="_blank">自定义时钟demo</a>
