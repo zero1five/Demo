@@ -6,4 +6,4 @@
 <br />
 <a href="http://voidsky.cn/Demo/douban/">豆瓣书架实例</a>
 <br />
-<a href="http://voidsky.cn/Demo/Gs/" target="_blank">豆瓣书架实例</a>
+<a href="http://voidsky.cn/Demo/Gs/" target="_blank">淘宝商品图片放大镜实例</a>
