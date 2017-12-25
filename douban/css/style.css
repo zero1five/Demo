@@ -1,0 +1,26 @@
+body,div {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background: #cccc99;
+}
+dl {
+    border-bottom: 1px dotted #000;
+}
+dt {
+    font-size: 18px;
+}
+dl span {
+    margin-left: 7rem;
+    font-size: 14px;
+}
+#q {
+    height: 2.5rem;
+    width: 12rem;
+    font-size: 18px;
+}
+#btn {
+    border-radius: 5px;
+    background: wheat;
+}
