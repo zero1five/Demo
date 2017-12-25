@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body, div, img, span {
+            padding: 0;
+            margin: 0;
+        }
+        #div1 {
+            width: 200px;
+            height: 150px;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+        span {
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            opacity: 0.5;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        #div1 img{
+            width: 100%;
+            height: 100%;
+        }
+        #div2 {
+            width: 550px;
+            height: 300px;
+            position: absolute;
+            left: 500px;
+            overflow: hidden;
+        }
+        #div2 img {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <img src="img/105.jpg" alt="">
+        <span></span>
+    </div>
+    <div id="div2">
+        <img src="img/105.jpg" alt="">
+    </div>
+    <script>
+        var oDiv = document.getElementById('div1');
+        var oSpan = oDiv.getElementsByTagName('span')[0];
+        var oDiv2 = document.getElementById('div2');
+        var img2 = oDiv2.getElementsByTagName('img')[0];
+
+        oDiv.onmouseenter = function(){
+            oSpan.style.display = 'block';
+
+        }
+        oDiv.onmouseleave = function(){
+            oSpan.style.display = 'none';
+        }
+        oDiv.onmousemove = function(ev){
+
+            document.body.style.cursor="move";
+
+            var ev = ev || window.event;
+
+            var L = ev.clientX - oDiv.offsetLeft - oSpan.offsetWidth/2;
+            var T = ev.clientY - oDiv.offsetTop - oSpan.offsetHeight/2;
+
+            if(L<0){
+                L=0;
+            }else if(L>oDiv.offsetWidth-oSpan.offsetWidth){
+                L = oDiv.offsetWidth-oSpan.offsetWidth;
+            }
+            if(T<0){
+                T=0;
+            }else if(T>oDiv.offsetHeight - oSpan.offsetHeight){
+                T = oDiv.offsetHeight - oSpan.offsetHeight;
+            }
+
+
+            oSpan.style.left = L + 'px';
+            oSpan.style.top = T + 'px';
+
+
+
+
+            var scaleX = L/(oDiv.offsetWidth - oSpan.offsetWidth);
+            var scaleY = T/(oDiv.offsetTop - oSpan.offsetTop);
+
+            img2.style.left = - scaleX * (img2.offsetWidth - oDiv2.offsetWidth) + 'px';
+            img2.style.top = - scaleY * (img2.offsetHeight - oDiv2.offsetHeight) + 'px';
+        }
+    </script>
+</body>
+</html>
