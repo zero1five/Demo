@@ -1,6 +1,6 @@
 # Demo
 
-<a href="http://voidsky.cn/Demo/search/" target="_blank">百度下拉提示实例</a>
+<a target="_blank" href="http://voidsky.cn/Demo/search/">百度下拉提示实例</a>
 <br />
 <a href="http://zero1five.gitee.io/lazyman/block/zero.html" target="_blank">Video player实例</a>
 <br />
