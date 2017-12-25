@@ -10,4 +10,4 @@
 <br />
 <a href="http://voidsky.cn/Demo/clock/clock.html" target="_blank" target="_blank">自定义时钟demo</a>
 <br />
-<a href="http://zero1five.gitee.io/lazyman/Design/" target="_blank" target="_blank">无趣的静态页demo，图片会动罢了</a>
+<a href="http://zero1five.gitee.io/lazyman/Design/" target="_blank" target="_blank">不使用bt手搓css布局的静态页demo</a>
