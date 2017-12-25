@@ -9,14 +9,7 @@
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <title>Find and explore</title>
-    <style>
-        dl {
-            border-bottom: 1px dotted #000;
-        }
-        dt {
-            font-size: 18px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <input type="text" id="q"><input type="button" id="btn" value="搜索">
@@ -27,11 +20,13 @@
     <script>
 
         function fn1(data){
+            
             oMsg.innerHTML = data.title.$t + ':' + data['opensearch:totalResults'].$t + '条';
+            
             var oEntry = data.entry;
             var html = '';
             for(var i=0; i<oEntry.length; i++){
-                html += '<dl><dt>' + oEntry[i].title.$t  + '</dt><dd><img src="'+ oEntry[i].link[2]['@href'] +'"></dd></dl>';
+                html += '<dl><dt>' + oEntry[i].title.$t  + '</dt><dd><img src="'+ oEntry[i].link[2]['@href'] +'"></dd><span>作者&译者：'+ oEntry[i].author[0].name.$t +'</span></dl>';
             }
             oList.innerHTML = html;
         }
@@ -47,8 +42,19 @@
                 document.body.appendChild(oScript);
             }
         }
+        /*
+        window.onscroll = function(){
+            var seeHeight = document.documentElement.clientHeight; //可见区域高度
+            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop; //滚动条距离顶部高度
+            fn1();
+            for(var i=0; i<oEntry.length;i++){
 
-        
+                if(oEntry[i].offsetTop <seeHeight + scrollTop){
+                    golist();
+                }
+            }
+        }
+
         function golist(){
             var xhr = new XMLHttpRequest();
 
@@ -62,6 +68,7 @@
                     }
             }     
         }
+        */
     </script>
 </body>
 </html>
