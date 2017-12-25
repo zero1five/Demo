@@ -19,8 +19,8 @@
             left: 50%;
         }
         span {
-            width: 100px;
-            height: 100px;
+            width: 50px;
+            height: 50px;
             background: yellow;
             opacity: 0.5;
             position: absolute;
@@ -38,11 +38,17 @@
             position: absolute;
             left: 500px;
             overflow: hidden;
+            display: none;
         }
         #div2 img {
             position: absolute;
             left: 0;
             top: 0;
+        }
+        p {
+            position: absolute;
+            left: 64%;
+            top: 55%;
         }
     </style>
 </head>
@@ -54,6 +60,9 @@
     <div id="div2">
         <img src="img/105.jpg" alt="">
     </div>
+    <p>
+       ← here！here！
+    </p>
     <script>
         var oDiv = document.getElementById('div1');
         var oSpan = oDiv.getElementsByTagName('span')[0];
@@ -62,10 +71,12 @@
 
         oDiv.onmouseenter = function(){
             oSpan.style.display = 'block';
+            oDiv2.style.display = 'block';
 
         }
         oDiv.onmouseleave = function(){
             oSpan.style.display = 'none';
+            oDiv2.style.display = 'none';
         }
         oDiv.onmousemove = function(ev){
 
@@ -98,7 +109,7 @@
             var scaleY = T/(oDiv.offsetTop - oSpan.offsetTop);
 
             img2.style.left = - scaleX * (img2.offsetWidth - oDiv2.offsetWidth) + 'px';
-            img2.style.top = - scaleY * (img2.offsetHeight - oDiv2.offsetHeight) + 'px';
+            img2.style.top = - scaleY * (img2.offsetHeight - oDiv2.offsetHeight) * 3.5 + 'px';
         }
     </script>
 </body>
