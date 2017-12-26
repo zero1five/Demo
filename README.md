@@ -6,10 +6,12 @@
 <br />
 <a href="http://voidsky.cn/Demo/douban/" target="_blank">豆瓣书架实例</a>
 <br />
-<a href="http://voidsky.cn/Demo/Gs/" target="_blank" target="_blank">淘宝商品图片放大镜实例</a>
+<a href="http://voidsky.cn/Demo/Gs/" target="_blank">淘宝商品图片放大镜实例</a>
 <br />
-<a href="http://voidsky.cn/Demo/clock/clock.html" target="_blank" target="_blank">自定义时钟demo</a>
+<a href="http://voidsky.cn/Demo/clock/clock.html" target="_blank">自定义时钟demo</a>
 <br />
-<a href="http://zero1five.gitee.io/lazyman/Design/" target="_blank" target="_blank">不使用bt手搓css布局的静态页demo</a>
+<a href="http://zero1five.gitee.io/lazyman/Design/" target="_blank"不使用bt手搓css布局的静态页demo</a>
 <br />
-<a href="http://zero1five.gitee.io/lazyman/Zero/" target="_blank" target="_blank">奇妙的CSS3动画demo</a>
+<a href="http://zero1five.gitee.io/lazyman/Zero/" target="_blank">奇妙的CSS3动画demo</a>
+<br />
+<a href="http://voidsky.cn/Demo/hot/demo9.html" target="_blank">不知道是多少年前的焦点图效果demo</a>
