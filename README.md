@@ -10,7 +10,7 @@
 <br />
 <a href="http://voidsky.cn/Demo/clock/clock.html" target="_blank">自定义时钟demo</a>
 <br />
-<a href="http://zero1five.gitee.io/lazyman/Design/" target="_blank"不使用bt手搓css布局的静态页demo</a>
+<a href="http://zero1five.gitee.io/lazyman/Design/" target="_blank">不使用bt手搓css布局的静态页demo</a>
 <br />
 <a href="http://zero1five.gitee.io/lazyman/Zero/" target="_blank">奇妙的CSS3动画demo</a>
 <br />
