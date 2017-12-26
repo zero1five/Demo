@@ -82,7 +82,7 @@ body {
     height: 150px;
     margin: -75px 0 0 -125px;
     border: 3px solid #f6f5ec;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     -webkit-box-reflect: below 0px
     -webkit-linear-gradient(top , rgba(255,255,255,0.2)0%,rgba(255,255,255,0.5)100%);
