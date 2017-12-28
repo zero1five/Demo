@@ -111,6 +111,12 @@ var view = doc.getElementById('view');
 var friend_show = doc.getElementById('friend_show');
 var aImg2 = friend_show.getElementsByTagName('img');  //获取所有的图片
 
+(function(){  //处理iframe的onload问题
+    if(tab_show){
+        oIframe.src = 'http://bns.qq.com/act/a20131006audiovisual/arts.shtml';
+    }
+})();
+
 oF.onclick = function(ev){
 
     oIframe.style.cssText = 'transform: rotateY(-90deg); opacity: 0;';
