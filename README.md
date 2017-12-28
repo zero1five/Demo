@@ -15,3 +15,5 @@
 <a href="http://zero1five.gitee.io/lazyman/Zero/" target="_blank">奇妙的CSS3动画demo</a>
 <br />
 <a href="http://voidsky.cn/Demo/hot/demo9.html" target="_blank">不知道是多少年前的焦点图效果demo</a>
+<br />
+<a href="http://voidsky.cn/Demo/2048/" target="_blank">一款又老又有趣（雾）的小游戏——2048</a>
