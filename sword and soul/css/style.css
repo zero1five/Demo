@@ -1,0 +1,347 @@
+::-webkit-scrollbar{
+    display:none;
+  }
+  * {
+      font-family: '微软雅黑';
+  }
+#firstshow {
+    height: 100vh;
+    width: 100vw;
+    background: url(../img/wrap.jpg) no-repeat center ;
+    background-size: cover;
+    z-index: 4;
+}
+#tab_show {
+    position: absolute;
+    left: 10%;
+    top: 25%;
+    background: url(../img/tiger.png) ;
+    transform: translate3d(-25px,0,0);
+    opacity: 0;
+    transition: all 2.5s;
+}
+#show_box {
+    position: absolute;
+    top: 66%;
+    left: 29%;
+    width: 1000px;
+    height: 165px;
+    background: #7ce5ff52;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.6);
+}
+#show_box img{
+    border: hidden;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    width: 335px;
+    height: 165px;
+    float: left;
+}
+#shuffling_img {
+    width: 330px;
+    height: 165px;
+    background: #7ce5ff52;
+    float: right;
+} 
+.ball-box {
+    width: 50px;
+    height: 10px;
+    position: absolute;
+    right: 15px;
+    bottom: 5px;
+    display: flex;
+    justify-content: center;
+}
+.active {
+    background: rgb(24, 155, 231)!important;
+}
+.ball-box div {
+    width: 7px;
+    height: 7px;
+    display: inline-block;
+    margin: 0 auto;
+    background: rgb(68, 67, 67);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.nav-menu {
+    position: absolute;
+    right: 0;
+    top: 200px;
+    width: 50px;
+}
+.nav-menu div {
+    width: 100px;
+    height: 30px;
+    background: #064563;
+    color: white;
+    border-radius: 5px;
+    transform: translate(-30%,0) rotate(-15deg);
+    margin: 5px 0;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: all .5s;
+}
+#control{
+    transform: translate(-50%,0) rotate(-15deg);
+}
+.nav-menu div:hover{
+    background: #0c6a81fb;
+    transform: translate(-50%,0) rotate(-10deg);
+}
+#activity {
+    margin: 0 150px auto auto;
+    background: url(../img/three.png);
+    width: 220px;
+    height: 220px;
+    background-position: 105px 200px;
+}
+#twoshow {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #e5f4f8fb;
+    overflow-y: hidden;
+}
+.left-img {
+    width: 385px;
+    z-index: 4;
+    position: relative;
+}
+.right-img {
+    width: 100vw;
+    height: 100%;
+}
+.show-menu {
+    position: absolute;
+    left: 193px;
+    top: 140px;
+    height: 100%;
+    width: 192px;
+    background: #cc6633;
+    z-index: 5;
+}
+.download-top {
+    width: 192px;
+    height: 20px;
+    background: url(../img/five.png);
+    background-position: 0 0;
+}
+.download-center {
+    margin-top: 20px;
+    width: 192px;
+    height: 125px;
+    background: url(../img/five.png);
+    background-position: 0 -20px;
+    transition: all .3s;
+    cursor: pointer;
+}
+.download-center:hover {
+    background-position: 0 -158px;
+}
+.download-bottom {
+    width: 192px;
+    height: 128px;
+    background: #ff6633;
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+    flex-flow: column;
+    cursor: pointer;
+    color: rgb(200, 207, 207,0.7);
+}
+.download-bottom div{
+    height: 40px;
+    width: 40px;
+    margin: 20px auto;
+    background: url(../img/five.png);
+    background-position: -104px -308px;
+    transition: all .4s;
+}
+.nav-tab {
+    width: 192px;
+    height: 85px;
+    background: #333333;
+    line-height: 85px;
+    text-align: center;
+    font-size: 17px;
+    color: #b1aeae;
+    border-bottom: 1px solid grey;
+    cursor: pointer;
+    transition: all .3s;
+}
+.one,.two,.three,.four{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url(../img/five.png);
+    transform: translate(0,30%);
+}
+.one {
+    background-position: -2px -308px;
+}
+.two {
+    background-position: -55px -308px;
+}
+.three {
+    background-position: -155px -308px;
+}
+.four {
+    background-position: -155px -358px;
+}
+.nav-tab:hover {
+    background: #09658f;
+    color: white;
+}
+.nav-tab:hover span{
+    display: none;
+}
+.show-menu i {
+    margin: 10px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+.five {
+    background: url(../img/five.png);
+    background-position: 4px -454px;
+}
+.six {
+    background: url(../img/five.png);
+    background-position: -30px -454px;
+}
+.seven {
+    background: url(../img/five.png);
+    background-position: -65px -454px;
+}
+.eight {
+    background: url(../img/five.png);
+    background-position: -65px -454px;
+}
+.nine {
+    background: url(../img/five.png);
+    background-position: -98px -487px;
+}
+.ten {
+    background: url(../img/five.png);
+    background-position: -142px -451px;
+}
+.ten-one {
+    background: url(../img/five.png);
+    background-position: -32px -492px; 
+}
+@keyframes snow{
+    0% {
+        background-position: 0 0 , 0 0;
+    }
+    100% {
+        background-position: 500px 500px,1000px 500px;
+    }
+}
+#snowMask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/snow1.png),url(../img/snow2.png);
+    animation:  10s snow linear infinite;
+    pointer-events: none;
+}
+.tab-menu {
+    margin-top: 5px;
+    float: right;
+    width: 900px;
+    height: 50px;
+    background: -webkit-linear-gradient(
+        top,
+        #008af7,
+        #35baf8
+    );
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.tab-menu span {
+    display: inline-block;
+    width: 70px;
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: all .3s;
+}
+.tab-menu span:nth-child(6){
+    color: #ffeb3b;
+}
+.tab-menu span:hover {
+    color: #064563;
+}
+.decoration {
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-right: 50px solid #008af7;
+    border-bottom: 25px solid transparent;
+    transform: translateX(-50px);
+    position: absolute;
+    display: inline-block;
+}
+.logo {
+    position: absolute;
+    right: 50px;
+    display: inline-block;
+    width: 170px;
+    height: 40px;
+    background: url(../img/five.png);
+    background-position: 2px -590px; 
+}
+#show_details {
+    position: absolute;
+    right: 5px;
+    bottom: 10px;
+    width: 1500px;
+    height: 800px;
+}
+#show_details iframe {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #333;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.6);
+    z-index: 3;
+    transition: all .5s;
+    position: absolute;
+}
+#ins {
+    padding: 5px;
+    color: white;
+    width: 150px;
+    position: absolute;
+    right: 10px;
+    top: 400px;
+    border: 1px solid #58b3f8;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.5);
+    transition: all .7s;
+    transform: rotateY(-90deg) rotateZ(-90deg);
+    opacity: 0;
+}
+#friend_show {
+    width: 100%;
+    height: 100%;
+    background: url(../img/wrap.jpg) no-repeat center;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.6);
+    position: absolute;
+    transition: all .5s;
+    transform: rotateY(90deg);
+}
+#friend_show img {
+    border: 1px solid #2da9e2;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.6);
+    cursor: pointer;
+    transition: all 1s;
+    position: absolute;
+    border-radius: 50%;
+}

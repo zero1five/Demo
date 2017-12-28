@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <title>Sword and soul</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="wrap">
+        <!-- 首屏展示 -->
+        <div id="firstshow">
+            <div class="nav-menu">
+                <div>官网首页</div>
+                <div>极速下载</div>
+                <div>了解最新活动</div>
+                <div>神兵图录</div>
+                <div id="control"><i class="fa fa-paper-plane" aria-hidden="true"></i> view more</div>
+            </div>
+            <div id="ins">学习之余，做的一个小demo，对剑灵官网进行概念和结构上的重绘~第二页只做了“灵芝圈"~<br />整体页面设计很简单，主要是对前端优化的一些方面进行合理的设置~</div>
+            <img src="img/tiger.png" alt="tiger" id="tab_show">
+            <div id="show_box">
+                <img src="img/1513742669.jpg" alt="">
+                <img src="img/1513742674.jpg" alt="">
+                <div id="shuffling_img">
+                    <img src="img/1503556305.jpg" alt="" id="img_show">
+                    <div class="ball-box" id="ball_box">
+                        <div class="active"></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div id="activity"></div>
+        </div>
+        <!-- 二屏游戏特色 -->
+        <div id="twoshow">
+            <img src="img/four.jpg" alt="" class="left-img">
+            <div class="show-menu">
+                <div class="download-top"></div>
+                <div class="download-center"></div>
+                <div class="download-bottom"><div></div><p>新手礼包</p></div>
+                <div class="nav-tab"><span class="one"></span> 点券充值</div>
+                <div class="nav-tab"><span class="two"></span> 兑换中心</div>
+                <div class="nav-tab"><span class="three"></span> 活动中心</div>
+                <div class="nav-tab"><span class="four"></span> 版本中心</div>
+                <i class="five"></i><i class="six"></i><i class="seven"></i>
+                <i class="eight"></i> <i class="nine"></i> <i class="ten"></i>
+                <i class="ten-one"></i>
+            </div>
+            <!-- 选项卡 -->
+            <div class="tab-menu">
+                <p class="decoration"></p>
+                <span id="view">视听</span><span>活动</span><span>声色坊</span><span>时装</span><span id="friend">灵芝圈</span>
+                <div class="logo"></div>
+            </div>
+            <div id="show_details">
+                <iframe src="http://bns.qq.com/act/a20131006audiovisual/arts.shtml"id="mainframe" name="mainframe" marginwidth="0" marginheight="0" src="/Home/Activitylist" frameborder="0" width="100%" scrolling="no" height="100%"></iframe>
+                <div id="friend_show">
+                    <img src="default.jpg" data-src="img/7.jpg" alt="">
+                    <img src="default.jpg" data-src="img/8.jpg" alt="">
+                    <img src="default.jpg" data-src="img/9.jpg" alt="">
+                    <img src="default.jpg" data-src="img/10.jpg" alt="">
+                    <img src="default.jpg" data-src="img/11.jpg" alt="">
+                    <img src="default.jpg" data-src="img/12.jpg" alt="">
+                    <img src="default.jpg" data-src="img/9K=.jpg" alt="">
+                    <img src="default.jpg" data-src="img/one.jpg" alt="">
+                    <img src="default.jpg" data-src="img/six.jpg" alt="">
+                    <img src="default.jpg" data-src="img/two.jpg" alt="">
+                    <img src="default.jpg" data-src="img/Z.jpg" alt="">
+
+                </div>
+            </div>
+        </div>
+        <!-- 三屏游戏简介 -->
+        <div id="threeshow"></div>
+        <!-- 雪花 -->
+        <div id="snowMask"></div>
+    </div>
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+        $("#mainframe").load(function () {
+        var mainheight = $(this).contents().find("body").height() + 30;
+         $(this).height(mainheight);
+        });
+    </script>
+</body>
+</html>
