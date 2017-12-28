@@ -1,347 +1,97 @@
-::-webkit-scrollbar{
-    display:none;
-  }
-  * {
-      font-family: '微软雅黑';
-  }
-#firstshow {
-    height: 100vh;
-    width: 100vw;
-    background: url(../img/wrap.jpg) no-repeat center ;
-    background-size: cover;
-    z-index: 4;
-}
-#tab_show {
-    position: absolute;
-    left: 10%;
-    top: 25%;
-    background: url(../img/tiger.png) ;
-    transform: translate3d(-25px,0,0);
-    opacity: 0;
-    transition: all 2.5s;
-}
-#show_box {
-    position: absolute;
-    top: 66%;
-    left: 29%;
-    width: 1000px;
-    height: 165px;
-    background: #7ce5ff52;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.6);
-}
-#show_box img{
-    border: hidden;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-    width: 335px;
-    height: 165px;
-    float: left;
-}
-#shuffling_img {
-    width: 330px;
-    height: 165px;
-    background: #7ce5ff52;
-    float: right;
-} 
-.ball-box {
-    width: 50px;
-    height: 10px;
-    position: absolute;
-    right: 15px;
-    bottom: 5px;
-    display: flex;
-    justify-content: center;
-}
-.active {
-    background: rgb(24, 155, 231)!important;
-}
-.ball-box div {
-    width: 7px;
-    height: 7px;
-    display: inline-block;
-    margin: 0 auto;
-    background: rgb(68, 67, 67);
-    border-radius: 50%;
-    cursor: pointer;
-}
-.nav-menu {
-    position: absolute;
-    right: 0;
-    top: 200px;
-    width: 50px;
-}
-.nav-menu div {
-    width: 100px;
-    height: 30px;
-    background: #064563;
-    color: white;
-    border-radius: 5px;
-    transform: translate(-30%,0) rotate(-15deg);
-    margin: 5px 0;
-    line-height: 30px;
-    text-align: center;
-    cursor: pointer;
-    transition: all .5s;
-}
-#control{
-    transform: translate(-50%,0) rotate(-15deg);
-}
-.nav-menu div:hover{
-    background: #0c6a81fb;
-    transform: translate(-50%,0) rotate(-10deg);
-}
-#activity {
-    margin: 0 150px auto auto;
-    background: url(../img/three.png);
-    width: 220px;
-    height: 220px;
-    background-position: 105px 200px;
-}
-#twoshow {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    background: #e5f4f8fb;
-    overflow-y: hidden;
-}
-.left-img {
-    width: 385px;
-    z-index: 4;
-    position: relative;
-}
-.right-img {
-    width: 100vw;
-    height: 100%;
-}
-.show-menu {
-    position: absolute;
-    left: 193px;
-    top: 140px;
-    height: 100%;
-    width: 192px;
-    background: #cc6633;
-    z-index: 5;
-}
-.download-top {
-    width: 192px;
-    height: 20px;
-    background: url(../img/five.png);
-    background-position: 0 0;
-}
-.download-center {
-    margin-top: 20px;
-    width: 192px;
-    height: 125px;
-    background: url(../img/five.png);
-    background-position: 0 -20px;
-    transition: all .3s;
-    cursor: pointer;
-}
-.download-center:hover {
-    background-position: 0 -158px;
-}
-.download-bottom {
-    width: 192px;
-    height: 128px;
-    background: #ff6633;
-    display: flex;
-    margin-top: 15px;
-    align-items: center;
-    flex-flow: column;
-    cursor: pointer;
-    color: rgb(200, 207, 207,0.7);
-}
-.download-bottom div{
-    height: 40px;
-    width: 40px;
-    margin: 20px auto;
-    background: url(../img/five.png);
-    background-position: -104px -308px;
-    transition: all .4s;
-}
-.nav-tab {
-    width: 192px;
-    height: 85px;
-    background: #333333;
-    line-height: 85px;
-    text-align: center;
-    font-size: 17px;
-    color: #b1aeae;
-    border-bottom: 1px solid grey;
-    cursor: pointer;
-    transition: all .3s;
-}
-.one,.two,.three,.four{
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    background: url(../img/five.png);
-    transform: translate(0,30%);
-}
-.one {
-    background-position: -2px -308px;
-}
-.two {
-    background-position: -55px -308px;
-}
-.three {
-    background-position: -155px -308px;
-}
-.four {
-    background-position: -155px -358px;
-}
-.nav-tab:hover {
-    background: #09658f;
-    color: white;
-}
-.nav-tab:hover span{
-    display: none;
-}
-.show-menu i {
-    margin: 10px;
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-}
-.five {
-    background: url(../img/five.png);
-    background-position: 4px -454px;
-}
-.six {
-    background: url(../img/five.png);
-    background-position: -30px -454px;
-}
-.seven {
-    background: url(../img/five.png);
-    background-position: -65px -454px;
-}
-.eight {
-    background: url(../img/five.png);
-    background-position: -65px -454px;
-}
-.nine {
-    background: url(../img/five.png);
-    background-position: -98px -487px;
-}
-.ten {
-    background: url(../img/five.png);
-    background-position: -142px -451px;
-}
-.ten-one {
-    background: url(../img/five.png);
-    background-position: -32px -492px; 
-}
-@keyframes snow{
-    0% {
-        background-position: 0 0 , 0 0;
-    }
-    100% {
-        background-position: 500px 500px,1000px 500px;
-    }
-}
-#snowMask {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: url(../img/snow1.png),url(../img/snow2.png);
-    animation:  10s snow linear infinite;
-    pointer-events: none;
-}
-.tab-menu {
-    margin-top: 5px;
-    float: right;
-    width: 900px;
-    height: 50px;
-    background: -webkit-linear-gradient(
-        top,
-        #008af7,
-        #35baf8
-    );
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.tab-menu span {
-    display: inline-block;
-    width: 70px;
-    height: 50px;
-    line-height: 50px;
-    color: white;
-    font-size: 22px;
-    text-align: center;
-    margin: 0 20px;
-    cursor: pointer;
-    transition: all .3s;
-}
-.tab-menu span:nth-child(6){
-    color: #ffeb3b;
-}
-.tab-menu span:hover {
-    color: #064563;
-}
-.decoration {
-    width: 0;
-    height: 0;
-    border-top: 25px solid transparent;
-    border-right: 50px solid #008af7;
-    border-bottom: 25px solid transparent;
-    transform: translateX(-50px);
-    position: absolute;
-    display: inline-block;
-}
-.logo {
-    position: absolute;
-    right: 50px;
-    display: inline-block;
-    width: 170px;
-    height: 40px;
-    background: url(../img/five.png);
-    background-position: 2px -590px; 
-}
-#show_details {
-    position: absolute;
-    right: 5px;
-    bottom: 10px;
-    width: 1500px;
-    height: 800px;
-}
-#show_details iframe {
-    width: 100%;
-    height: 100%;
-    border: 1px solid #333;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.6);
-    z-index: 3;
-    transition: all .5s;
-    position: absolute;
-}
-#ins {
-    padding: 5px;
-    color: white;
-    width: 150px;
-    position: absolute;
-    right: 10px;
-    top: 400px;
-    border: 1px solid #58b3f8;
-    box-shadow: 0 1px 10px rgba(0,0,0,0.5);
-    transition: all .7s;
-    transform: rotateY(-90deg) rotateZ(-90deg);
-    opacity: 0;
-}
-#friend_show {
-    width: 100%;
-    height: 100%;
-    background: url(../img/wrap.jpg) no-repeat center;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.6);
-    position: absolute;
-    transition: all .5s;
-    transform: rotateY(90deg);
-}
-#friend_show img {
-    border: 1px solid #2da9e2;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.6);
-    cursor: pointer;
-    transition: all 1s;
-    position: absolute;
-    border-radius: 50%;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <title>Sword and soul</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="wrap">
+        <!-- 首屏展示 -->
+        <div id="firstshow">
+            <div class="nav-menu">
+                <div>官网首页</div>
+                <div>极速下载</div>
+                <div>了解最新活动</div>
+                <div>神兵图录</div>
+                <div id="control"><i class="fa fa-paper-plane" aria-hidden="true"></i> view more</div>
+            </div>
+            <div id="ins">学习之余，做的一个小demo，对剑灵官网进行概念和结构上的重绘~第二页只做了“灵芝圈"~<br />整体页面设计很简单，主要是对前端优化的一些方面进行合理的设置~</div>
+            <img src="img/tiger.png" alt="tiger" id="tab_show">
+            <div id="show_box">
+                <img src="img/1513742669.jpg" alt="">
+                <img src="img/1513742674.jpg" alt="">
+                <div id="shuffling_img">
+                    <img src="img/1503556305.jpg" alt="" id="img_show">
+                    <div class="ball-box" id="ball_box">
+                        <div class="active"></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div id="activity"></div>
+        </div>
+        <!-- 二屏游戏特色 -->
+        <div id="twoshow">
+            <img src="img/four.jpg" alt="" class="left-img">
+            <div class="show-menu">
+                <div class="download-top"></div>
+                <div class="download-center"></div>
+                <div class="download-bottom"><div></div><p>新手礼包</p></div>
+                <div class="nav-tab"><span class="one"></span> 点券充值</div>
+                <div class="nav-tab"><span class="two"></span> 兑换中心</div>
+                <div class="nav-tab"><span class="three"></span> 活动中心</div>
+                <div class="nav-tab"><span class="four"></span> 版本中心</div>
+                <i class="five"></i><i class="six"></i><i class="seven"></i>
+                <i class="eight"></i> <i class="nine"></i> <i class="ten"></i>
+                <i class="ten-one"></i>
+            </div>
+            <!-- 选项卡 -->
+            <div class="tab-menu">
+                <p class="decoration"></p>
+                <span id="view">视听</span><span>活动</span><span>声色坊</span><span>时装</span><span id="friend">灵芝圈</span>
+                <div class="logo"></div>
+            </div>
+            <div id="show_details">
+                <iframe src="" id="mainframe" name="mainframe" marginwidth="0" marginheight="0" src="/Home/Activitylist" frameborder="0" width="100%" scrolling="no" height="100%"></iframe>
+                <div id="friend_show">
+                    <img src="default.jpg" data-src="img/7.jpg" alt="">
+                    <img src="default.jpg" data-src="img/8.jpg" alt="">
+                    <img src="default.jpg" data-src="img/9.jpg" alt="">
+                    <img src="default.jpg" data-src="img/10.jpg" alt="">
+                    <img src="default.jpg" data-src="img/11.jpg" alt="">
+                    <img src="default.jpg" data-src="img/12.jpg" alt="">
+                    <img src="default.jpg" data-src="img/9K=.jpg" alt="">
+                    <img src="default.jpg" data-src="img/one.jpg" alt="">
+                    <img src="default.jpg" data-src="img/six.jpg" alt="">
+                    <img src="default.jpg" data-src="img/two.jpg" alt="">
+                    <img src="default.jpg" data-src="img/Z.jpg" alt="">
+
+                </div>
+            </div>
+        </div>
+        <!-- 三屏游戏简介 -->
+        <div id="threeshow"></div>
+        <!-- 雪花 -->
+        <div id="snowMask"></div>
+    </div>
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+        $("#mainframe").load(function () {
+        var mainheight = $(this).contents().find("body").height() + 30;
+         $(this).height(mainheight);
+        });
+    </script>
+</body>
+</html>
