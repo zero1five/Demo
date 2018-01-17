@@ -20,4 +20,4 @@
 <br />
 <a href="http://voidsky.cn/Demo/todo/" target="_blank">Todo list应用</a>
 <br />
-<a href="http://voidsky.cn/Demo/todo/Vue-Todo/test.html" target="_blank">Todo list - Vue</a>
+<a href="http://voidsky.cn/Demo/Vue-Todo/test.html" target="_blank">Todo list - Vue</a>
